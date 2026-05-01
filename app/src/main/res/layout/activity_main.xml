@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F2F6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="LAB 8\nThreads, Handler &amp; AsyncTask"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#2D3436"
+            android:paddingBottom="18dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:padding="20dp"
+                    android:background="@drawable/bg_image"
+                    android:src="@drawable/ic_android_lab"/>
+
+                <TextView
+                    android:id="@+id/txtStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Statut : prêt"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#2D3436"
+                    android:gravity="center"
+                    android:layout_marginTop="18dp"/>
+
+                <TextView
+                    android:id="@+id/txtProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Progression : 0%"
+                    android:textSize="15sp"
+                    android:textColor="#636E72"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:visibility="invisible"
+                    android:progressTint="#0984E3"
+                    android:progressBackgroundTint="#DFE6E9"
+                    android:layout_marginTop="18dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnLoadThread"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Charger image (Thread)"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#6C5CE7"/>
+
+        <Button
+            android:id="@+id/btnCalcAsync"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text=" Calcul lourd (AsyncTask)"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#0984E3"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Annuler"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#F39C12"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/btnToast"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Afficher Toast"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#00B894"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pendant un traitement long, clique sur Afficher Toast pour vérifier que l’interface reste fluide."
+            android:textColor="#636E72"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="18dp"
+            android:layout_marginTop="18dp"/>
+
+    </LinearLayout>
+</ScrollView>
